@@ -1,18 +1,18 @@
 package gallifrey
 
-import(
+import (
 	"fmt"
 	"time"
 )
 
 func RelativeTime(t time.Time) string {
 	duration := time.Since(t)
-	var(
-		count int
-		unit string
+	var (
+		count      int
+		unit       string
 		monthHours = 24 * 31
-		weekHours = 24 * 7
-		dayHours = 24
+		weekHours  = 24 * 7
+		dayHours   = 24
 	)
 
 	if hours := int(duration.Hours()); hours >= monthHours {
